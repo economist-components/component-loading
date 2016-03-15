@@ -1,11 +1,11 @@
-import React from 'react';
 import Loading from './index';
+import React from 'react';
 
 export default (
   <div>
     <p>Default with no overlay</p>
     <Loading />
-    <br/>
+    <br />
     <div className="overlay">
       Just a test that is overlayed by the loader
       <Loading loadingText="We are loading something..." className="loading--overlay" />

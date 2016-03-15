@@ -1,7 +1,6 @@
-import React from 'react';
 import Delay from 'react-delay';
+import React from 'react';
 
-/* eslint-disable func-style */
 export default class Loading extends React.Component {
 
   static get propTypes() {
@@ -11,6 +10,10 @@ export default class Loading extends React.Component {
       loadingText: React.PropTypes.string,
       delay: React.PropTypes.number,
     };
+  }
+
+  shouldComponentUpdate() {
+    return false;
   }
 
   render() {
@@ -41,8 +44,7 @@ export default class Loading extends React.Component {
         );
       }
       return children;
-    }
-
+    };
     return maybeDelay(
       <div className={[ 'loading' ].concat(extraClassNames).join(' ')}>
         {els}
