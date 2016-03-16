@@ -154,6 +154,6 @@
     "watchify": "^3.7.0"
   },
   "peerDependencies": {
-    "react": "^0.14.0"
+    "react": "^0.14.7"
   }
 }
