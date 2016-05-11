@@ -101,7 +101,6 @@
     ]
   },
   "dependencies": {
-    "@economist/component-devpack": "^3.5.0",
     "react": "^0.14.8||^15.0.0",
     "react-delay": "0.0.3"
   },
