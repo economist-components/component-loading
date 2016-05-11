@@ -16,7 +16,7 @@
   position: relative;
   margin: 0 auto;
   text-indent: -9999em;
-  animation: spinnerAnimation var(--loading-speed, var(--loading-default-speed)) infinite linear;
+  animation: spinneranimation var(--loading-speed, var(--loading-default-speed)) infinite linear;
   border-top: var(--loading-thickness, var(--loading-default-thickness)) solid rgba(0, 0, 0, 0.2);
   border-right: var(--loading-thickness, var(--loading-default-thickness)) solid rgba(0, 0, 0, 0.2);
   border-bottom: var(--loading-thickness, var(--loading-default-thickness)) solid rgba(0, 0, 0, 0.2);
@@ -46,7 +46,7 @@
 
 /* eslint-disable selector-no-type */
 
-@keyframes spinnerAnimation {
+@keyframes spinneranimation {
   0% {
     transform: rotate(0deg);
   }
