@@ -21,7 +21,7 @@ export default class Loading extends React.Component {
     const extraClassNames = this.props.className ? this.props.className.split(/\s+/g) : [];
     const els = [];
     if (this.props.loadContent) {
-      els.push(<span className="loader-content-hidden" key="read-context" role="status">{this.props.loadContent}
+      els.push(<span className="loading__content" key="loading__content" role="status">{this.props.loadContent}
       </span>);
     }
     if (this.props.overlay) {

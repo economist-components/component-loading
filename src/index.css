@@ -44,7 +44,7 @@
   background: var(--loading--overlay__background, #fff);
 }
 
-.loader-content-hidden {
+.loading__content {
   width: 1px;
   height: 1px;
   z-index: -1;

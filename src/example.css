@@ -27,7 +27,8 @@
   background: #fff;
 }
 
-.loader-content-hidden {
-  z-index: -1;
+.loading__content {
+  width: 1px;
+  height: 1px;
 }
 
