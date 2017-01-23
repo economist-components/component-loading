@@ -9,6 +9,7 @@ export default class Loading extends React.Component {
       overlay: React.PropTypes.bool,
       loadingText: React.PropTypes.string,
       delay: React.PropTypes.number,
+      loadContent: React.PropTypes.string.isRequired,
     };
   }
 
@@ -19,12 +20,15 @@ export default class Loading extends React.Component {
   render() {
     const extraClassNames = this.props.className ? this.props.className.split(/\s+/g) : [];
     const els = [];
+    if (this.props.loadContent) {
+      els.push(<span className="loader-content-hidden" key="read-context" role="status">{this.props.loadContent}
+      </span>);
+    }
     if (this.props.overlay) {
       els.push(<div className="loading__overlay" key="loading__overlay"></div>);
     }
 
     els.push(<div className="loading__inner" key="loading__inner"></div>);
-
     if (this.props.loadingText) {
       els.push(
         <div className="loading__text" key="loading__text">

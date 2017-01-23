@@ -26,3 +26,8 @@
   text-align: center;
   background: #fff;
 }
+
+.loader-content-hidden {
+  z-index: -1;
+}
+
