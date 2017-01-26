@@ -44,12 +44,11 @@
   background: var(--loading--overlay__background, #fff);
 }
 
-.loading__content {
+.loading__text {
   width: 1px;
   height: 1px;
   z-index: -1;
 }
-
 
 /* eslint-disable selector-no-type */
 
