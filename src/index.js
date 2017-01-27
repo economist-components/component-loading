@@ -30,11 +30,11 @@ export default class Loading extends React.Component {
     els.push(<div className="loading__inner" key="loading__inner"></div>);
     if (this.props.loadingText) {
       els.push(
-        <div className="loading__text" key="loading__text">
+        <a className="loading__text" key="loading__text">
           <span role="status" className="loading__text-inner">
             {this.props.loadingText}
           </span>
-        </div>
+        </a>
       );
     }
 
