@@ -7,8 +7,13 @@ export default class Loading extends React.Component {
     return {
       className: React.PropTypes.string,
       overlay: React.PropTypes.bool,
-      loadingText: React.PropTypes.string.isRequired,
+      loadingText: React.PropTypes.string,
       delay: React.PropTypes.number,
+    };
+  }
+  static get defaultProps() {
+    return {
+      loadingText: 'the browser is loading new content',
     };
   }
 
