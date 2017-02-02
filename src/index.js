@@ -11,6 +11,11 @@ export default class Loading extends React.Component {
       delay: React.PropTypes.number,
     };
   }
+  static get defaultProps() {
+    return {
+      loadingText: 'the browser is loading new content',
+    };
+  }
 
   shouldComponentUpdate() {
     return false;
@@ -22,16 +27,14 @@ export default class Loading extends React.Component {
     if (this.props.overlay) {
       els.push(<div className="loading__overlay" key="loading__overlay"></div>);
     }
-
     els.push(<div className="loading__inner" key="loading__inner"></div>);
-
     if (this.props.loadingText) {
       els.push(
-        <div className="loading__text" key="loading__text">
-          <div className="loading__text-inner">
+        <a className="loading__text" key="loading__text">
+          <span role="status" className="loading__text-inner">
             {this.props.loadingText}
-          </div>
-        </div>
+          </span>
+        </a>
       );
     }
 

@@ -18,10 +18,20 @@ describe('Loading', () => {
       main.should.have.exactly(1).descendants('.loading');
       main.find('.loading').should.have.exactly(1).descendants('.loading__inner');
     });
+    it('has one span child', () => {
+      const main = mount(<Loading loadingText="Loading something" />);
+      const loadingTextNode = main.find('.loading__text');
+      loadingTextNode.should.have.exactly(1).descendants('.loading__text-inner');
+    });
     it('could have a text', () => {
       const main = mount(<Loading loadingText="Loading something" />);
       const loadingTextNode = main.find('.loading__text');
       loadingTextNode.find('.loading__text-inner').should.have.text('Loading something');
+    });
+    it('has span with attribute aria role', () => {
+      const main = mount(<Loading loadingText="Loading something" />);
+      const loadingTextNode = main.find('.loading__text');
+      loadingTextNode.find('.loading__text-inner').should.have.attr('role', 'status');
     });
     it('could have an overlay element', () => {
       const main = mount(<Loading overlay />);

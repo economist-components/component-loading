@@ -4,13 +4,14 @@ import React from 'react';
 export default (
   <div>
     <p>Default with no overlay</p>
-    <Loading />
+    <Loading loadingText="Overwrite default value of props loadingText" />
     <br />
-    <div className="overlay">
+    <div className="overlay" >
       Just a test that is overlayed by the loader
-      <Loading loadingText="We are loading something..." className="loading--overlay" />
+      <Loading className="loading--overlay" />
     </div>
     <p>With 2 seconds of delay</p>
     <Loading delay={2000} />
   </div>
 );
+
