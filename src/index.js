@@ -1,22 +1,8 @@
 import Delay from 'react-delay';
 import React from 'react';
+import PropTypes from 'prop-types';
 
 export default class Loading extends React.Component {
-
-  static get propTypes() {
-    return {
-      className: React.PropTypes.string,
-      overlay: React.PropTypes.bool,
-      loadingText: React.PropTypes.string,
-      delay: React.PropTypes.number,
-    };
-  }
-  static get defaultProps() {
-    return {
-      loadingText: 'the browser is loading new content',
-    };
-  }
-
   shouldComponentUpdate() {
     return false;
   }
@@ -55,3 +41,16 @@ export default class Loading extends React.Component {
     );
   }
 }
+
+if (process.env.NODE_ENV !== 'production') {
+  Loading.propTypes = {
+    className: PropTypes.string,
+    overlay: PropTypes.bool,
+    loadingText: PropTypes.string,
+    delay: PropTypes.number,
+  };
+}
+
+Loading.defaultProps = {
+  loadingText: 'the browser is loading new content',
+};
