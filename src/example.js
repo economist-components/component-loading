@@ -14,4 +14,3 @@ export default (
     <Loading delay={2000} />
   </div>
 );
-
